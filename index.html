@@ -2,123 +2,71 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="StyleBazaar — फैशन खोजें, स्टाइल गाइड पढ़ें और अपने पसंदीदा प्रोडक्ट खोजें।">
-<title>StyleBazaar | Fashion, Your Way</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StyleBazaar | Fashion Finds</title>
 <style>
-:root{--bg:#f8f6f2;--ink:#171717;--muted:#6d6a66;--accent:#c59b62;--accent2:#e8d6bc;--card:#fff;--line:#e8e2d9;--dark:#171717}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif}
-a{color:inherit}.container{max-width:1180px;margin:auto;padding:0 22px}
-.topline{background:#252321;color:#f5eee4;text-align:center;padding:9px 12px;font-size:12px;letter-spacing:.7px}
-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
-.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brandmark{width:38px;height:38px;background:var(--ink);color:var(--accent2);display:grid;place-items:center;border-radius:50%;font-family:Georgia,serif;font-weight:bold;font-size:21px}
-.brandname{font-size:22px;font-weight:900;letter-spacing:-.7px}.brandname span{color:#a77a43}
-nav{display:flex;gap:23px;align-items:center}nav a{text-decoration:none;font-size:13px;font-weight:650}
-.navright{display:flex;align-items:center;gap:10px}.langbtn,.menuBtn{border:1px solid var(--line);background:white;padding:10px 12px;border-radius:6px;cursor:pointer}
-.hero{padding:48px 0 36px}.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:stretch}
-.herotext{background:#eee4d6;padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:420px}
-.eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#927044}
-h1{font-size:clamp(38px,5.6vw,70px);line-height:.99;letter-spacing:-2.5px;margin:18px 0 20px;max-width:560px}
-.herotext p{max-width:470px;line-height:1.75;color:#514a42;font-size:15px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--dark);color:#fff;text-decoration:none;padding:14px 19px;border-radius:4px;font-size:13px;font-weight:750;margin-top:15px;border:0;cursor:pointer}
-.heroart{background:linear-gradient(145deg,#d4b99a,#eee1d0);min-height:420px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.heroart:before{content:"";position:absolute;width:67%;height:90%;bottom:-12%;left:16%;border-radius:48% 48% 10% 10%;background:linear-gradient(100deg,#453a32,#171717 55%,#645044);transform:rotate(-5deg)}
-.heroart:after{content:"SB";position:absolute;right:22px;top:18px;color:#fff;font:italic 42px Georgia,serif;opacity:.8}
-.heroBadge{position:absolute;bottom:20px;left:20px;background:#fff;padding:15px 18px;z-index:2;max-width:210px;box-shadow:0 8px 28px #0001}
-.heroBadge strong{display:block;font-size:13px;margin-bottom:5px}.heroBadge span{font-size:12px;color:var(--muted)}
-section{padding:35px 0 48px}.sectionHead{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:22px}
-.sectionHead h2{margin:7px 0 0;font-size:clamp(26px,3vw,36px);letter-spacing:-1px}.sub{color:var(--muted);font-size:13px;line-height:1.6}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.filters button{border:1px solid var(--line);background:#fff;padding:10px 14px;border-radius:3px;cursor:pointer;font-size:12px}.filters button.active{background:var(--ink);color:white;border-color:var(--ink)}
-.productGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
-.product{background:var(--card);border:1px solid var(--line);min-width:0}
-.productVisual{height:220px;display:grid;place-items:center;position:relative;overflow:hidden;background:linear-gradient(140deg,#eee3d5,#d8c4ad)}
-.productVisual .emoji{font-size:76px;filter:drop-shadow(0 12px 8px #0001)}
-.product:nth-child(4n+2) .productVisual{background:linear-gradient(140deg,#d9d9d3,#f0eee8)}
-.product:nth-child(4n+3) .productVisual{background:linear-gradient(140deg,#d9c5c2,#f0e4df)}
-.product:nth-child(4n+4) .productVisual{background:linear-gradient(140deg,#d4d8ce,#edf0e8)}
-.pill{position:absolute;top:12px;left:12px;background:#fff;padding:6px 8px;font-size:9px;font-weight:800;letter-spacing:.8px}
-.productBody{padding:15px}.category{color:#977448;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
-.product h3{font-size:15px;margin:8px 0;line-height:1.35}.product p{font-size:12px;color:var(--muted);line-height:1.6;min-height:38px;margin:0 0 13px}
-.productActions{display:flex;gap:8px;align-items:center}.shopLink{flex:1;text-align:center;background:var(--ink);color:#fff;text-decoration:none;padding:11px 8px;font-size:11px;font-weight:750;border-radius:3px}
-.how{background:#eee4d6}.howGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.howCard{background:#fff;padding:22px;border:1px solid #e5d8c7}.num{font:italic 28px Georgia,serif;color:#a77a43}.howCard h3{font-size:15px}.howCard p{font-size:13px;color:var(--muted);line-height:1.7}
-.disclosure{background:#fff;border:1px solid var(--line);padding:17px 19px;font-size:12px;line-height:1.7;color:#555;margin-top:24px}
-footer{background:#171717;color:white;padding:36px 0 22px}.footerGrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}.footerText{color:#c6c0b8;font-size:12px;line-height:1.8;max-width:380px}.footerHead{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);font-weight:800}.footerLinks{display:grid;gap:10px;margin-top:14px}.footerLinks a{color:#e5dfd6;text-decoration:none;font-size:12px}.copyright{border-top:1px solid #393633;margin-top:28px;padding-top:18px;color:#aaa;font-size:11px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-@media(max-width:900px){nav{gap:12px}.productGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.heroGrid{grid-template-columns:1fr 1fr}.herotext{min-height:360px}.heroart{min-height:360px}}
-@media(max-width:650px){.nav{padding-top:13px;padding-bottom:13px;flex-wrap:wrap}.nav nav{order:3;width:100%;overflow:auto;padding:6px 0}.navright{margin-left:auto} .hero{padding-top:22px}.heroGrid{grid-template-columns:1fr}.herotext{min-height:340px}.heroart{min-height:290px}.productVisual{height:175px}.howGrid{grid-template-columns:1fr}.footerGrid{grid-template-columns:1fr 1fr}.footerGrid>div:first-child{grid-column:1/-1}}
-@media(max-width:390px){.container{padding:0 14px}.productGrid{gap:10px}.productVisual{height:145px}.productBody{padding:11px}.product h3{font-size:13px}.shopLink{font-size:10px}.brandname{font-size:19px}}
+:root{--bg:#f8f6f2;--ink:#171717;--gold:#c59b62;--muted:#6d6a66;--line:#e8e2d9}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}header{background:#171717;color:#fff;padding:20px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.logo{font-weight:900;font-size:24px;color:#f0d7ae}.logo span{color:#fff}
+nav{display:flex;gap:18px}nav a{color:#fff;text-decoration:none;font-size:13px}
+.hero{padding:52px 0;background:#eee4d6}.eyebrow{color:#927044;font-weight:bold;letter-spacing:2px;font-size:11px}
+h1{font-size:clamp(36px,6vw,62px);line-height:1.02;margin:15px 0;max-width:700px}.hero p{max-width:650px;line-height:1.7;color:#514a42}
+.btn,.buy{display:inline-block;background:#171717;color:white;text-decoration:none;padding:12px 16px;border-radius:4px;font-size:13px;font-weight:bold}
+section{padding:38px 0}.head{display:flex;justify-content:space-between;gap:12px;align-items:end;flex-wrap:wrap}.head h2{margin:8px 0;font-size:30px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.filters button,.lang{padding:9px 12px;border:1px solid var(--line);background:white;cursor:pointer;border-radius:4px}.filters button.active{background:#171717;color:white}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid var(--line)}.visual{height:185px;display:grid;place-items:center;background:linear-gradient(135deg,#e6d5c0,#f5eee5);font-size:65px}.body{padding:16px}.tag{font-size:10px;color:#927044;font-weight:bold;letter-spacing:1px}.body h3{font-size:17px;margin:9px 0}.body p{color:var(--muted);font-size:13px;line-height:1.55;min-height:38px}.buy{width:100%;text-align:center}
+.notice{background:#fff;border-left:4px solid var(--gold);padding:15px;margin-top:20px;font-size:12px;line-height:1.7;color:#555}
+footer{background:#171717;color:#ddd;padding:28px 0;font-size:12px;line-height:1.7}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.visual{height:150px}}@media(max-width:450px){.grid{grid-template-columns:1fr}.visual{height:170px}}
 </style>
 </head>
 <body>
-<div class="topline" data-hi="आपका स्टाइल, आपकी पसंद — फैशन खोजें और समझदारी से खरीदें" data-en="YOUR STYLE, YOUR CHOICE — DISCOVER FASHION, SHOP SMART">आपका स्टाइल, आपकी पसंद — फैशन खोजें और समझदारी से खरीदें</div>
-<header><div class="container nav">
-<a class="brand" href="#" aria-label="StyleBazaar home"><span class="brandmark">S</span><span class="brandname">Style<span>Bazaar</span></span></a>
-<nav><a href="#shop" data-hi="शॉप" data-en="Shop">शॉप</a><a href="#guides" data-hi="स्टाइल गाइड" data-en="Style Guides">स्टाइल गाइड</a><a href="#about" data-hi="हमारे बारे में" data-en="About">हमारे बारे में</a></nav>
-<div class="navright"><button class="langbtn" id="langBtn">English</button></div>
-</div></header>
-<main>
-<div class="container hero"><div class="heroGrid">
-<div class="herotext"><div class="eyebrow" data-hi="नया सीज़न • नया स्टाइल" data-en="NEW SEASON • NEW STYLE">नया सीज़न • नया स्टाइल</div>
-<h1 data-hi="फैशन जो आपके जैसा हो।" data-en="Fashion that feels like you.">फैशन जो आपके जैसा हो।</h1>
-<p data-hi="कपड़ों, जूतों और एक्सेसरीज़ के लिए नए आइडिया खोजें। उपयोगी स्टाइल टिप्स के साथ अपने अगले पसंदीदा लुक तक पहुँचें।" data-en="Discover fresh ideas in clothing, shoes, and accessories. Find your next favorite look with useful style tips and curated picks.">कपड़ों, जूतों और एक्सेसरीज़ के लिए नए आइडिया खोजें। उपयोगी स्टाइल टिप्स के साथ अपने अगले पसंदीदा लुक तक पहुँचें।</p>
-<a class="btn" href="#shop" data-hi="फैशन देखें ↗" data-en="EXPLORE FASHION ↗">फैशन देखें ↗</a>
-</div>
-<div class="heroart" role="img" aria-label="Abstract fashion editorial illustration"><div class="heroBadge"><strong data-hi="कमाल का लुक, आसान चुनाव" data-en="A great look, an easy choice">कमाल का लुक, आसान चुनाव</strong><span data-hi="आपकी रोज़मर्रा की स्टाइल गाइड" data-en="Your everyday style guide">आपकी रोज़मर्रा की स्टाइल गाइड</span></div></div>
-</div></div>
-<section id="shop"><div class="container">
-<div class="sectionHead"><div><div class="eyebrow">THE STYLE EDIT</div><h2 data-hi="इस हफ्ते की पसंद" data-en="This Week's Picks">इस हफ्ते की पसंद</h2></div><div class="sub" data-hi="अपने अंदाज़ के अनुसार कैटेगरी चुनें।" data-en="Choose a category that matches your style.">अपने अंदाज़ के अनुसार कैटेगरी चुनें।</div></div>
-<div class="filters" id="filters">
-<button class="active" data-cat="all" data-hi="सभी" data-en="All">सभी</button><button data-cat="women" data-hi="महिलाओं के कपड़े" data-en="Women">महिलाओं के कपड़े</button><button data-cat="men" data-hi="पुरुषों के कपड़े" data-en="Men">पुरुषों के कपड़े</button><button data-cat="shoes" data-hi="जूते" data-en="Shoes">जूते</button><button data-cat="bags" data-hi="बैग" data-en="Bags">बैग</button><button data-cat="accessories" data-hi="एक्सेसरीज़" data-en="Accessories">एक्सेसरीज़</button>
-</div><div class="productGrid" id="productGrid"></div>
-<div class="disclosure"><strong data-hi="एफिलिएट डिस्क्लोज़र:" data-en="Affiliate disclosure:">एफिलिएट डिस्क्लोज़र:</strong> <span data-hi="इस वेबसाइट पर कुछ लिंक एफिलिएट लिंक हो सकते हैं। यदि आप ऐसे लिंक से खरीदारी करते हैं, तो हमें अतिरिक्त लागत के बिना कमीशन मिल सकता है। लिंक प्रकाशित करने से पहले उन्हें अपने स्वीकृत एफिलिएट लिंक से बदलें।" data-en="Some links on this website may be affiliate links. We may earn a commission at no extra cost to you if you buy through them. Replace the sample links with your approved affiliate links before publishing.">इस वेबसाइट पर कुछ लिंक एफिलिएट लिंक हो सकते हैं। यदि आप ऐसे लिंक से खरीदारी करते हैं, तो हमें अतिरिक्त लागत के बिना कमीशन मिल सकता है। लिंक प्रकाशित करने से पहले उन्हें अपने स्वीकृत एफिलिएट लिंक से बदलें।</span></div>
+<header><div class="wrap nav"><div class="logo">Style<span>Bazaar</span></div><nav><a href="#shop">Shop / शॉप</a><a href="#about">About / जानकारी</a></nav><button class="lang" id="lang">English</button></div></header>
+<div class="hero"><div class="wrap"><div class="eyebrow">YOUR STYLE. YOUR CHOICE.</div><h1 data-hi="फैशन जो आपके जैसा हो।" data-en="Fashion that feels like you.">फैशन जो आपके जैसा हो।</h1><p data-hi="कपड़े, जूते, बैग और एक्सेसरीज़ के लिए फैशन सुझाव खोजें। खरीदने से पहले कीमत, साइज़ और रिटर्न पॉलिसी ज़रूर जाँचें।" data-en="Discover fashion picks for clothing, shoes, bags, and accessories. Check price, sizing, and return policies before buying.">कपड़े, जूते, बैग और एक्सेसरीज़ के लिए फैशन सुझाव खोजें। खरीदने से पहले कीमत, साइज़ और रिटर्न पॉलिसी ज़रूर जाँचें।</p><a class="btn" href="#shop" data-hi="फैशन देखें ↓" data-en="Explore fashion ↓">फैशन देखें ↓</a></div></div>
+<section id="shop"><div class="wrap"><div class="head"><div><div class="eyebrow">THE STYLE EDIT</div><h2 data-hi="फैशन पसंद" data-en="Fashion Picks">फैशन पसंद</h2></div><p data-hi="कैटेगरी चुनें और प्रोडक्ट देखें।" data-en="Choose a category and explore products.">कैटेगरी चुनें और प्रोडक्ट देखें।</p></div>
+<div class="filters" id="filters"><button class="active" data-cat="all" data-hi="सभी" data-en="All">सभी</button><button data-cat="women" data-hi="महिलाएँ" data-en="Women">महिलाएँ</button><button data-cat="men" data-hi="पुरुष" data-en="Men">पुरुष</button><button data-cat="shoes" data-hi="जूते" data-en="Shoes">जूते</button><button data-cat="bags" data-hi="बैग" data-en="Bags">बैग</button><button data-cat="accessories" data-hi="एक्सेसरीज़" data-en="Accessories">एक्सेसरीज़</button></div>
+<div class="grid" id="grid"></div>
+<div class="notice"><strong>Affiliate disclosure / एफिलिएट सूचना:</strong> इस वेबसाइट पर एफिलिएट लिंक हो सकते हैं। उनसे खरीदारी करने पर हमें बिना अतिरिक्त लागत के कमीशन मिल सकता है। Amazon Associates के लिए आवश्यक कथन भी यहाँ रखें: “As an Amazon Associate I earn from qualifying purchases.”</div>
 </div></section>
-<section id="guides" class="how"><div class="container"><div class="sectionHead"><div><div class="eyebrow">THE STYLE JOURNAL</div><h2 data-hi="स्मार्ट स्टाइल टिप्स" data-en="Smart Style Tips">स्मार्ट स्टाइल टिप्स</h2></div></div>
-<div class="howGrid">
-<article class="howCard"><div class="num">01</div><h3 data-hi="खरीदने से पहले फिट देखें" data-en="Check the fit first">खरीदने से पहले फिट देखें</h3><p data-hi="साइज़ चार्ट, कपड़े का विवरण और ग्राहक समीक्षाएँ पढ़ें। हर ब्रांड का साइज़ अलग हो सकता है।" data-en="Check the size chart, fabric details, and customer reviews. Sizing can vary between brands.">साइज़ चार्ट, कपड़े का विवरण और ग्राहक समीक्षाएँ पढ़ें। हर ब्रांड का साइज़ अलग हो सकता है।</p></article>
-<article class="howCard"><div class="num">02</div><h3 data-hi="कम चीज़ों से ज़्यादा लुक" data-en="More looks, fewer pieces">कम चीज़ों से ज़्यादा लुक</h3><p data-hi="ऐसे बेसिक कपड़े चुनें जिन्हें अलग-अलग अवसरों पर मिलाकर पहना जा सके।" data-en="Choose versatile basics that can be mixed and matched for different occasions.">ऐसे बेसिक कपड़े चुनें जिन्हें अलग-अलग अवसरों पर मिलाकर पहना जा सके।</p></article>
-<article class="howCard"><div class="num">03</div><h3 data-hi="ऑफ़र की शर्तें पढ़ें" data-en="Read offer terms">ऑफ़र की शर्तें पढ़ें</h3><p data-hi="खरीदारी से पहले अंतिम कीमत, डिलीवरी शुल्क, रिटर्न और एक्सचेंज की शर्तें जाँचें।" data-en="Before buying, verify the final price, delivery fees, and return or exchange policy.">खरीदारी से पहले अंतिम कीमत, डिलीवरी शुल्क, रिटर्न और एक्सचेंज की शर्तें जाँचें।</p></article>
-</div></div></section>
-<section id="about"><div class="container"><div class="sectionHead"><div><div class="eyebrow">OUR POINT OF VIEW</div><h2 data-hi="स्टाइल, बिना उलझन के" data-en="Style, without the fuss">स्टाइल, बिना उलझन के</h2></div></div><p class="sub" style="max-width:720px" data-hi="StyleBazaar का उद्देश्य फैशन खोजने और प्रोडक्ट विकल्पों की तुलना करने में आपकी मदद करना है। हम उपयोगी सुझाव और पारदर्शी एफिलिएट जानकारी देने की कोशिश करते हैं।" data-en="StyleBazaar helps you discover fashion and compare product options. We aim to share useful recommendations and transparent affiliate information.">StyleBazaar का उद्देश्य फैशन खोजने और प्रोडक्ट विकल्पों की तुलना करने में आपकी मदद करना है। हम उपयोगी सुझाव और पारदर्शी एफिलिएट जानकारी देने की कोशिश करते हैं।</p></div></section>
-</main>
-<footer><div class="container"><div class="footerGrid">
-<div><a class="brand" href="#" style="color:white"><span class="brandmark">S</span><span class="brandname">Style<span>Bazaar</span></span></a><p class="footerText" data-hi="फैशन खोजें, अपने स्टाइल को निखारें और सोच-समझकर खरीदारी करें।" data-en="Discover fashion, refine your style, and shop thoughtfully.">फैशन खोजें, अपने स्टाइल को निखारें और सोच-समझकर खरीदारी करें।</p></div>
-<div><div class="footerHead" data-hi="नेविगेशन" data-en="Explore">नेविगेशन</div><div class="footerLinks"><a href="#shop" data-hi="फैशन शॉप" data-en="Fashion Shop">फैशन शॉप</a><a href="#guides" data-hi="स्टाइल गाइड" data-en="Style Guides">स्टाइल गाइड</a><a href="#about" data-hi="हमारे बारे में" data-en="About Us">हमारे बारे में</a></div></div>
-<div><div class="footerHead" data-hi="ज़रूरी जानकारी" data-en="Information">ज़रूरी जानकारी</div><div class="footerLinks"><a href="#disclosure" data-hi="एफिलिएट जानकारी नीचे देखें" data-en="See affiliate disclosure above">एफिलिएट जानकारी नीचे देखें</a><a href="mailto:replace-with-your-email@example.com">Contact</a></div></div>
-</div><div class="copyright"><span>© <span id="year"></span> StyleBazaar</span><span data-hi="डेमो टेम्पलेट — प्रकाशित करने से पहले लिंक और संपर्क अपडेट करें।" data-en="Starter template — update links and contact details before publishing.">डेमो टेम्पलेट — प्रकाशित करने से पहले लिंक और संपर्क अपडेट करें।</span></div></div></footer>
+<section id="about"><div class="wrap"><div class="eyebrow">ABOUT STYLEBAZAAR</div><h2 data-hi="सोच-समझकर खरीदें" data-en="Shop thoughtfully">सोच-समझकर खरीदें</h2><p data-hi="प्रोडक्ट विवरण और लिंक प्रकाशित करने से पहले जाँचें।" data-en="Verify product details and links before publishing.">प्रोडक्ट विवरण और लिंक प्रकाशित करने से पहले जाँचें।</p></div></section>
+<footer><div class="wrap">© <span id="year"></span> StyleBazaar · फैशन सुझाव और एफिलिएट लिंक। संपर्क: अपना ईमेल यहाँ डालें।</div></footer>
 <script>
-const items=[
-{cat:"women",icon:"👗",labelHi:"महिलाओं का फैशन",labelEn:"WOMEN",hi:"एथनिक वियर और कुर्ती",en:"Ethnic Wear & Kurtas",descHi:"रोज़मर्रा और खास मौकों के लिए।",descEn:"For everyday looks and special occasions.",url:"https://www.amazon.in/"},
-{cat:"men",icon:"👔",labelHi:"पुरुषों का फैशन",labelEn:"MEN",hi:"कैज़ुअल शर्ट और टी-शर्ट",en:"Casual Shirts & Tees",descHi:"आसान, आरामदायक वार्डरोब बेसिक्स।",descEn:"Easy and comfortable wardrobe basics.",url:"https://www.amazon.in/"},
-{cat:"shoes",icon:"👟",labelHi:"फुटवियर",labelEn:"FOOTWEAR",hi:"स्नीकर्स और रोज़मर्रा के जूते",en:"Sneakers & Everyday Shoes",descHi:"अपने हर दिन के लुक के लिए।",descEn:"Find a pair for your everyday look.",url:"https://www.amazon.in/"},
-{cat:"bags",icon:"👜",labelHi:"बैग",labelEn:"BAGS",hi:"हैंडबैग और बैकपैक",en:"Handbags & Backpacks",descHi:"स्टाइल और उपयोगिता का मेल।",descEn:"A blend of style and practicality.",url:"https://www.amazon.in/"},
-{cat:"accessories",icon:"🕶️",labelHi:"एक्सेसरीज़",labelEn:"ACCESSORIES",hi:"घड़ियाँ और सनग्लासेस",en:"Watches & Sunglasses",descHi:"लुक को पूरा करने वाले छोटे विवरण।",descEn:"Small details that finish the look.",url:"https://www.amazon.in/"},
-{cat:"women",icon:"👚",labelHi:"वार्डरोब बेसिक्स",labelEn:"WARDROBE BASICS",hi:"टॉप्स और रोज़मर्रा के कपड़े",en:"Tops & Everyday Wear",descHi:"कई तरह से स्टाइल किए जा सकने वाले पीस।",descEn:"Versatile pieces for multiple outfits.",url:"https://www.amazon.in/"},
-{cat:"men",icon:"👖",labelHi:"पुरुषों का फैशन",labelEn:"MEN",hi:"जींस और कैज़ुअल ट्राउज़र",en:"Jeans & Casual Trousers",descHi:"अपने स्टाइल के मुताबिक फिट चुनें।",descEn:"Find a fit that suits your style.",url:"https://www.amazon.in/"},
-{cat:"accessories",icon:"⌚",labelHi:"एक्सेसरीज़",labelEn:"ACCESSORIES",hi:"रोज़मर्रा की घड़ियाँ",en:"Everyday Watches",descHi:"सादे और क्लासिक स्टाइल के विकल्प।",descEn:"Simple and classic style options.",url:"https://www.amazon.in/"}
+/*
+=== आसान लिंक एडिटिंग ===
+नीचे PRODUCTS सूची में हर प्रोडक्ट के लिए titleHi/titleEn, category और url बदलें।
+url में अपना असली approved affiliate link पेस्ट करें।
+पहले प्रोडक्ट में आपका दिया हुआ लिंक पहले से जोड़ा गया है।
+*/
+const PRODUCTS = [
+ {category:"women", icon:"👗", titleHi:"आपका पहला फैशन प्रोडक्ट", titleEn:"Your First Fashion Product", descHi:"इस कार्ड का नाम और विवरण अपने वास्तविक प्रोडक्ट के अनुसार बदलें।", descEn:"Edit this card title and description to match the actual product.", url:"https://link.amazon/B06tf9Hk0"},
+ {category:"men", icon:"👔", titleHi:"कैज़ुअल शर्ट और टी-शर्ट", titleEn:"Casual Shirts & Tees", descHi:"अपने पसंदीदा पुरुषों के फैशन प्रोडक्ट जोड़ें।", descEn:"Add your preferred men's fashion products.", url:"https://www.amazon.in/"},
+ {category:"shoes", icon:"👟", titleHi:"स्नीकर्स और जूते", titleEn:"Sneakers & Shoes", descHi:"यहाँ जूतों का अपना एफिलिएट लिंक डालें।", descEn:"Paste your shoe affiliate link here.", url:"https://www.amazon.in/"},
+ {category:"bags", icon:"👜", titleHi:"हैंडबैग और बैकपैक", titleEn:"Handbags & Backpacks", descHi:"यहाँ बैग का अपना एफिलिएट लिंक डालें।", descEn:"Paste your bag affiliate link here.", url:"https://www.amazon.in/"},
+ {category:"accessories", icon:"🕶️", titleHi:"फैशन एक्सेसरीज़", titleEn:"Fashion Accessories", descHi:"यहाँ एक्सेसरी का अपना एफिलिएट लिंक डालें।", descEn:"Paste your accessory affiliate link here.", url:"https://www.amazon.in/"},
+ {category:"women", icon:"👚", titleHi:"टॉप्स और रोज़मर्रा के कपड़े", titleEn:"Tops & Everyday Wear", descHi:"यहाँ कपड़ों का अपना एफिलिएट लिंक डालें।", descEn:"Paste your clothing affiliate link here.", url:"https://www.amazon.in/"}
 ];
-let lang="hi",filter="all";const grid=document.getElementById("productGrid");
-function draw(){
+let language="hi", categoryFilter="all";
+const grid=document.getElementById("grid");
+function render(){
  grid.innerHTML="";
- items.filter(p=>filter==="all"||p.cat===filter).forEach((p,i)=>{
-  const card=document.createElement("article");card.className="product";
-  const visual=document.createElement("div");visual.className="productVisual";
-  const emoji=document.createElement("span");emoji.className="emoji";emoji.textContent=p.icon;visual.appendChild(emoji);
-  if(i===0){const pill=document.createElement("span");pill.className="pill";pill.textContent=lang==="hi"?"स्टाइल पिक":"STYLE PICK";visual.appendChild(pill)}
-  const body=document.createElement("div");body.className="productBody";
-  const category=document.createElement("div");category.className="category";category.textContent=lang==="hi"?p.labelHi:p.labelEn;
-  const h=document.createElement("h3");h.textContent=lang==="hi"?p.hi:p.en;
-  const d=document.createElement("p");d.textContent=lang==="hi"?p.descHi:p.descEn;
-  const a=document.createElement("a");a.className="shopLink";a.href=p.url;a.target="_blank";a.rel="noopener noreferrer sponsored";a.textContent=lang==="hi"?"प्रोडक्ट देखें ↗":"SHOP PRODUCTS ↗";
-  body.append(category,h,d,a);card.append(visual,body);grid.appendChild(card);
+ PRODUCTS.filter(p=>categoryFilter==="all"||p.category===categoryFilter).forEach(p=>{
+  const card=document.createElement("article");card.className="card";
+  const visual=document.createElement("div");visual.className="visual";visual.textContent=p.icon;
+  const body=document.createElement("div");body.className="body";
+  const tag=document.createElement("div");tag.className="tag";tag.textContent=p.category.toUpperCase();
+  const h=document.createElement("h3");h.textContent=language==="hi"?p.titleHi:p.titleEn;
+  const desc=document.createElement("p");desc.textContent=language==="hi"?p.descHi:p.descEn;
+  const a=document.createElement("a");a.className="buy";a.href=p.url;a.target="_blank";a.rel="noopener noreferrer sponsored";a.textContent=language==="hi"?"प्रोडक्ट देखें ↗":"View product ↗";
+  body.append(tag,h,desc,a);card.append(visual,body);grid.append(card);
  });
- document.querySelectorAll("[data-hi][data-en]").forEach(el=>{if(el.closest("#filters"))return;el.textContent=el.dataset[lang]});
- document.getElementById("langBtn").textContent=lang==="hi"?"English":"हिंदी";
- document.querySelectorAll("#filters button").forEach(b=>{b.classList.toggle("active",b.dataset.cat===filter);b.textContent=b.dataset[lang]});
+ document.querySelectorAll("[data-hi][data-en]").forEach(el=>{if(el.closest("#filters"))return;el.textContent=el.dataset[language]});
+ document.querySelectorAll("#filters button").forEach(b=>{b.textContent=b.dataset[language];b.classList.toggle("active",b.dataset.cat===categoryFilter)});
+ document.getElementById("lang").textContent=language==="hi"?"English":"हिंदी";
 }
-document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{filter=b.dataset.cat;draw()}));
-document.getElementById("langBtn").addEventListener("click",()=>{lang=lang==="hi"?"en":"hi";draw()});
-document.getElementById("year").textContent=new Date().getFullYear();draw();
+document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{categoryFilter=b.dataset.cat;render()}));
+document.getElementById("lang").addEventListener("click",()=>{language=language==="hi"?"en":"hi";render()});
+document.getElementById("year").textContent=new Date().getFullYear();render();
 </script>
 </body>
 </html>
