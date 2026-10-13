@@ -1,72 +1,30 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>StyleBazaar | Fashion Finds</title>
 <style>
-:root{--bg:#f8f6f2;--ink:#171717;--gold:#c59b62;--muted:#6d6a66;--line:#e8e2d9}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-.wrap{max-width:1100px;margin:auto;padding:0 20px}header{background:#171717;color:#fff;padding:20px 0}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.logo{font-weight:900;font-size:24px;color:#f0d7ae}.logo span{color:#fff}
-nav{display:flex;gap:18px}nav a{color:#fff;text-decoration:none;font-size:13px}
-.hero{padding:52px 0;background:#eee4d6}.eyebrow{color:#927044;font-weight:bold;letter-spacing:2px;font-size:11px}
-h1{font-size:clamp(36px,6vw,62px);line-height:1.02;margin:15px 0;max-width:700px}.hero p{max-width:650px;line-height:1.7;color:#514a42}
-.btn,.buy{display:inline-block;background:#171717;color:white;text-decoration:none;padding:12px 16px;border-radius:4px;font-size:13px;font-weight:bold}
-section{padding:38px 0}.head{display:flex;justify-content:space-between;gap:12px;align-items:end;flex-wrap:wrap}.head h2{margin:8px 0;font-size:30px}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.filters button,.lang{padding:9px 12px;border:1px solid var(--line);background:white;cursor:pointer;border-radius:4px}.filters button.active{background:#171717;color:white}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid var(--line)}.visual{height:185px;display:grid;place-items:center;background:linear-gradient(135deg,#e6d5c0,#f5eee5);font-size:65px}.body{padding:16px}.tag{font-size:10px;color:#927044;font-weight:bold;letter-spacing:1px}.body h3{font-size:17px;margin:9px 0}.body p{color:var(--muted);font-size:13px;line-height:1.55;min-height:38px}.buy{width:100%;text-align:center}
-.notice{background:#fff;border-left:4px solid var(--gold);padding:15px;margin-top:20px;font-size:12px;line-height:1.7;color:#555}
-footer{background:#171717;color:#ddd;padding:28px 0;font-size:12px;line-height:1.7}
-@media(max-width:700px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.visual{height:150px}}@media(max-width:450px){.grid{grid-template-columns:1fr}.visual{height:170px}}
-</style>
-</head>
-<body>
-<header><div class="wrap nav"><div class="logo">Style<span>Bazaar</span></div><nav><a href="#shop">Shop / शॉप</a><a href="#about">About / जानकारी</a></nav><button class="lang" id="lang">English</button></div></header>
+:root{--bg:#f8f6f2;--surface:#fff;--ink:#171717;--hero:#eee4d6;--accent:#a66c2d;--muted:#6d6a66;--line:#e8e2d9;--button:#171717;--buttonText:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;transition:background .2s,color .2s}body[data-theme="dark"]{--bg:#151515;--surface:#222;--ink:#f6f1e9;--hero:#29241f;--accent:#edc58f;--muted:#c2b9ad;--line:#3b3834;--button:#f0d7ae;--buttonText:#171717}body[data-theme="rose"]{--bg:#fff5f6;--surface:#fff;--ink:#39232b;--hero:#f5dfe5;--accent:#a83f65;--muted:#765c65;--line:#eed3dc;--button:#8e3155;--buttonText:#fff}body[data-theme="sage"]{--bg:#f3f6f0;--surface:#fff;--ink:#203027;--hero:#dfe9dc;--accent:#466b4d;--muted:#5c6c60;--line:#d7e1d4;--button:#294b32;--buttonText:#fff}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}header{background:#171717;color:#fff;padding:16px 0}.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.logo{font-weight:900;font-size:24px;color:#f0d7ae}.logo span{color:#fff}nav{display:flex;gap:16px}nav a{color:#fff;text-decoration:none;font-size:13px}.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.tool{padding:9px 10px;border:1px solid #777;background:#292929;color:white;cursor:pointer;border-radius:6px;font-size:13px}.hero{padding:48px 0;background:var(--hero)}.eyebrow{color:var(--accent);font-weight:bold;letter-spacing:2px;font-size:11px}h1{font-size:clamp(34px,6vw,62px);line-height:1.04;margin:15px 0;max-width:700px}.hero p{max-width:650px;line-height:1.7;color:var(--muted)}.btn,.buy{display:inline-block;background:var(--button);color:var(--buttonText);text-decoration:none;padding:12px 16px;border-radius:5px;font-size:13px;font-weight:bold;border:0}section{padding:34px 0}.head{display:flex;justify-content:space-between;gap:12px;align-items:end;flex-wrap:wrap}.head h2{margin:8px 0;font-size:30px}.head p{color:var(--muted)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.filters button{padding:9px 12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;border-radius:5px}.filters button.active{background:var(--button);color:var(--buttonText)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:var(--surface);border:1px solid var(--line);border-radius:7px;overflow:hidden;min-width:0}.visual{height:230px;background:#eee;overflow:hidden}.visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}.card:hover .visual img{transform:scale(1.04)}.body{padding:15px}.tag{font-size:10px;color:var(--accent);font-weight:bold;letter-spacing:1px}.body h3{font-size:17px;margin:9px 0}.body p{color:var(--muted);font-size:13px;line-height:1.55;min-height:38px}.buy{width:100%;text-align:center}.notice{background:var(--surface);border-left:4px solid var(--accent);padding:15px;margin-top:20px;font-size:12px;line-height:1.7;color:var(--muted)}footer{background:#171717;color:#ddd;padding:28px 0;font-size:12px;line-height:1.7}@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.visual{height:200px}.wrap{padding:0 14px}.hero{padding:35px 0}nav{gap:10px}}@media(max-width:480px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.visual{height:145px}.body{padding:10px}.body h3{font-size:14px}.body p{font-size:12px;min-height:52px}.buy{font-size:12px;padding:10px 5px}.logo{font-size:21px}.head h2{font-size:25px}.tool{padding:8px;font-size:12px}}
+</style></head>
+<body data-theme="classic">
+<header><div class="wrap nav"><div class="logo">Style<span>Bazaar</span></div><nav><a href="#shop">Shop / शॉप</a><a href="#about">About / जानकारी</a></nav><div class="tools"><button class="tool" id="themeBtn" aria-label="Change website theme">🎨 थीम बदलें</button><button class="tool" id="lang">English</button></div></div></header>
 <div class="hero"><div class="wrap"><div class="eyebrow">YOUR STYLE. YOUR CHOICE.</div><h1 data-hi="फैशन जो आपके जैसा हो।" data-en="Fashion that feels like you.">फैशन जो आपके जैसा हो।</h1><p data-hi="कपड़े, जूते, बैग और एक्सेसरीज़ के लिए फैशन सुझाव खोजें। खरीदने से पहले कीमत, साइज़ और रिटर्न पॉलिसी ज़रूर जाँचें।" data-en="Discover fashion picks for clothing, shoes, bags, and accessories. Check price, sizing, and return policies before buying.">कपड़े, जूते, बैग और एक्सेसरीज़ के लिए फैशन सुझाव खोजें। खरीदने से पहले कीमत, साइज़ और रिटर्न पॉलिसी ज़रूर जाँचें।</p><a class="btn" href="#shop" data-hi="फैशन देखें ↓" data-en="Explore fashion ↓">फैशन देखें ↓</a></div></div>
 <section id="shop"><div class="wrap"><div class="head"><div><div class="eyebrow">THE STYLE EDIT</div><h2 data-hi="फैशन पसंद" data-en="Fashion Picks">फैशन पसंद</h2></div><p data-hi="कैटेगरी चुनें और प्रोडक्ट देखें।" data-en="Choose a category and explore products.">कैटेगरी चुनें और प्रोडक्ट देखें।</p></div>
-<div class="filters" id="filters"><button class="active" data-cat="all" data-hi="सभी" data-en="All">सभी</button><button data-cat="women" data-hi="महिलाएँ" data-en="Women">महिलाएँ</button><button data-cat="men" data-hi="पुरुष" data-en="Men">पुरुष</button><button data-cat="shoes" data-hi="जूते" data-en="Shoes">जूते</button><button data-cat="bags" data-hi="बैग" data-en="Bags">बैग</button><button data-cat="accessories" data-hi="एक्सेसरीज़" data-en="Accessories">एक्सेसरीज़</button></div>
-<div class="grid" id="grid"></div>
-<div class="notice"><strong>Affiliate disclosure / एफिलिएट सूचना:</strong> इस वेबसाइट पर एफिलिएट लिंक हो सकते हैं। उनसे खरीदारी करने पर हमें बिना अतिरिक्त लागत के कमीशन मिल सकता है। Amazon Associates के लिए आवश्यक कथन भी यहाँ रखें: “As an Amazon Associate I earn from qualifying purchases.”</div>
-</div></section>
-<section id="about"><div class="wrap"><div class="eyebrow">ABOUT STYLEBAZAAR</div><h2 data-hi="सोच-समझकर खरीदें" data-en="Shop thoughtfully">सोच-समझकर खरीदें</h2><p data-hi="प्रोडक्ट विवरण और लिंक प्रकाशित करने से पहले जाँचें।" data-en="Verify product details and links before publishing.">प्रोडक्ट विवरण और लिंक प्रकाशित करने से पहले जाँचें।</p></div></section>
-<footer><div class="wrap">© <span id="year"></span> StyleBazaar · फैशन सुझाव और एफिलिएट लिंक। संपर्क: अपना ईमेल यहाँ डालें।</div></footer>
+<div class="filters" id="filters"><button class="active" data-cat="all" data-hi="सभी" data-en="All">सभी</button><button data-cat="women" data-hi="महिलाएँ" data-en="Women">महिलाएँ</button><button data-cat="men" data-hi="पुरुष" data-en="Men">पुरुष</button><button data-cat="shoes" data-hi="जूते" data-en="Shoes">जूते</button><button data-cat="bags" data-hi="बैग" data-en="Bags">बैग</button><button data-cat="accessories" data-hi="एक्सेसरीज़" data-en="Accessories">एक्सेसरीज़</button></div><div class="grid" id="grid"></div>
+<div class="notice"><strong>Affiliate disclosure / एफिलिएट सूचना:</strong> इस वेबसाइट पर एफिलिएट लिंक हो सकते हैं। उनसे खरीदारी करने पर हमें बिना अतिरिक्त लागत के कमीशन मिल सकता है। “As an Amazon Associate I earn from qualifying purchases.”</div></div></section>
+<section id="about"><div class="wrap"><div class="eyebrow">ABOUT STYLEBAZAAR</div><h2 data-hi="सोच-समझकर खरीदें" data-en="Shop thoughtfully">सोच-समझकर खरीदें</h2><p data-hi="प्रोडक्ट विवरण और लिंक प्रकाशित करने से पहले जाँचें।" data-en="Verify product details and links before publishing.">प्रोडक्ट विवरण और लिंक प्रकाशित करने से पहले जाँचें।</p></div></section><footer><div class="wrap">© <span id="year"></span> StyleBazaar · फैशन सुझाव और एफिलिएट लिंक। संपर्क: अपना ईमेल यहाँ डालें।</div></footer>
 <script>
-/*
-=== आसान लिंक एडिटिंग ===
-नीचे PRODUCTS सूची में हर प्रोडक्ट के लिए titleHi/titleEn, category और url बदलें।
-url में अपना असली approved affiliate link पेस्ट करें।
-पहले प्रोडक्ट में आपका दिया हुआ लिंक पहले से जोड़ा गया है।
-*/
-const PRODUCTS = [
- {category:"women", icon:"👗", titleHi:"आपका पहला फैशन प्रोडक्ट", titleEn:"Your First Fashion Product", descHi:"इस कार्ड का नाम और विवरण अपने वास्तविक प्रोडक्ट के अनुसार बदलें।", descEn:"Edit this card title and description to match the actual product.", url:"https://link.amazon/B06tf9Hk0"},
- {category:"men", icon:"👔", titleHi:"कैज़ुअल शर्ट और टी-शर्ट", titleEn:"Casual Shirts & Tees", descHi:"अपने पसंदीदा पुरुषों के फैशन प्रोडक्ट जोड़ें।", descEn:"Add your preferred men's fashion products.", url:"https://www.amazon.in/"},
- {category:"shoes", icon:"👟", titleHi:"स्नीकर्स और जूते", titleEn:"Sneakers & Shoes", descHi:"यहाँ जूतों का अपना एफिलिएट लिंक डालें।", descEn:"Paste your shoe affiliate link here.", url:"https://www.amazon.in/"},
- {category:"bags", icon:"👜", titleHi:"हैंडबैग और बैकपैक", titleEn:"Handbags & Backpacks", descHi:"यहाँ बैग का अपना एफिलिएट लिंक डालें।", descEn:"Paste your bag affiliate link here.", url:"https://www.amazon.in/"},
- {category:"accessories", icon:"🕶️", titleHi:"फैशन एक्सेसरीज़", titleEn:"Fashion Accessories", descHi:"यहाँ एक्सेसरी का अपना एफिलिएट लिंक डालें।", descEn:"Paste your accessory affiliate link here.", url:"https://www.amazon.in/"},
- {category:"women", icon:"👚", titleHi:"टॉप्स और रोज़मर्रा के कपड़े", titleEn:"Tops & Everyday Wear", descHi:"यहाँ कपड़ों का अपना एफिलिएट लिंक डालें।", descEn:"Paste your clothing affiliate link here.", url:"https://www.amazon.in/"}
-];
-let language="hi", categoryFilter="all";
-const grid=document.getElementById("grid");
-function render(){
- grid.innerHTML="";
- PRODUCTS.filter(p=>categoryFilter==="all"||p.category===categoryFilter).forEach(p=>{
-  const card=document.createElement("article");card.className="card";
-  const visual=document.createElement("div");visual.className="visual";visual.textContent=p.icon;
-  const body=document.createElement("div");body.className="body";
-  const tag=document.createElement("div");tag.className="tag";tag.textContent=p.category.toUpperCase();
-  const h=document.createElement("h3");h.textContent=language==="hi"?p.titleHi:p.titleEn;
-  const desc=document.createElement("p");desc.textContent=language==="hi"?p.descHi:p.descEn;
-  const a=document.createElement("a");a.className="buy";a.href=p.url;a.target="_blank";a.rel="noopener noreferrer sponsored";a.textContent=language==="hi"?"प्रोडक्ट देखें ↗":"View product ↗";
-  body.append(tag,h,desc,a);card.append(visual,body);grid.append(card);
- });
- document.querySelectorAll("[data-hi][data-en]").forEach(el=>{if(el.closest("#filters"))return;el.textContent=el.dataset[language]});
- document.querySelectorAll("#filters button").forEach(b=>{b.textContent=b.dataset[language];b.classList.toggle("active",b.dataset.cat===categoryFilter)});
- document.getElementById("lang").textContent=language==="hi"?"English":"हिंदी";
-}
-document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{categoryFilter=b.dataset.cat;render()}));
-document.getElementById("lang").addEventListener("click",()=>{language=language==="hi"?"en":"hi";render()});
-document.getElementById("year").textContent=new Date().getFullYear();render();
-</script>
-</body>
-</html>
+// हर प्रोडक्ट के url में अपना सही Affiliate लिंक लगाएँ। फोटो इंटरनेट से लोड होती हैं; फोटो के लिंक बाद में बदले जा सकते हैं।
+const PRODUCTS=[
+{category:"men",titleHi:"पुरुषों की कैज़ुअल शर्ट",titleEn:"Men's Casual Shirt",descHi:"पुरुषों की शर्ट के विकल्प देखें। खरीदने से पहले साइज़ और कीमत जाँचें।",descEn:"Explore men's shirts. Check size and price before buying.",url:"https://link.amazon/B06tf9Hk0",image:"https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=900&q=85",alt:"Men's shirt"},
+{category:"women",titleHi:"महिलाओं के फैशन कपड़े",titleEn:"Women's Fashion",descHi:"महिलाओं के लिए स्टाइलिश कपड़ों के विकल्प।",descEn:"Stylish clothing picks for women.",url:"https://www.amazon.in/",image:"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85",alt:"Women's fashion shopping"},
+{category:"shoes",titleHi:"स्नीकर्स और जूते",titleEn:"Sneakers & Shoes",descHi:"अपने स्टाइल के अनुसार जूते खोजें।",descEn:"Find shoes to match your style.",url:"https://www.amazon.in/",image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85",alt:"Sneakers"},
+{category:"bags",titleHi:"हैंडबैग और बैकपैक",titleEn:"Bags & Backpacks",descHi:"रोज़मर्रा के इस्तेमाल के लिए बैग।",descEn:"Bags for everyday use.",url:"https://www.amazon.in/",image:"https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=900&q=85",alt:"Handbag"},
+{category:"accessories",titleHi:"फैशन एक्सेसरीज़",titleEn:"Fashion Accessories",descHi:"अपने लुक को पूरा करने के लिए एक्सेसरीज़।",descEn:"Accessories to complete your look.",url:"https://www.amazon.in/",image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=85",alt:"Fashion accessories"},
+{category:"women",titleHi:"महिलाओं के रोज़मर्रा के कपड़े",titleEn:"Everyday Wear for Women",descHi:"रोज़ पहनने के लिए आरामदायक फैशन।",descEn:"Comfortable fashion for everyday wear.",url:"https://www.amazon.in/",image:"https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=900&q=85",alt:"Women's everyday clothing"}];
+let language="hi",categoryFilter="all";const grid=document.getElementById("grid");
+function render(){grid.innerHTML="";PRODUCTS.filter(p=>categoryFilter==="all"||p.category===categoryFilter).forEach(p=>{const card=document.createElement("article");card.className="card";const visual=document.createElement("div");visual.className="visual";const img=document.createElement("img");img.src=p.image;img.alt=p.alt;img.loading="lazy";img.onerror=()=>{visual.style.display="grid";visual.style.placeItems="center";visual.textContent="Image unavailable";};visual.append(img);const body=document.createElement("div");body.className="body";const tag=document.createElement("div");tag.className="tag";tag.textContent=p.category.toUpperCase();const h=document.createElement("h3");h.textContent=language==="hi"?p.titleHi:p.titleEn;const desc=document.createElement("p");desc.textContent=language==="hi"?p.descHi:p.descEn;const a=document.createElement("a");a.className="buy";a.href=p.url;a.target="_blank";a.rel="noopener noreferrer sponsored";a.textContent=language==="hi"?"प्रोडक्ट देखें ↗":"View product ↗";body.append(tag,h,desc,a);card.append(visual,body);grid.append(card)});document.querySelectorAll("[data-hi][data-en]").forEach(el=>{if(el.closest("#filters"))return;el.textContent=el.dataset[language]});document.querySelectorAll("#filters button").forEach(b=>{b.textContent=b.dataset[language];b.classList.toggle("active",b.dataset.cat===categoryFilter)});document.getElementById("lang").textContent=language==="hi"?"English":"हिंदी";document.getElementById("themeBtn").textContent=language==="hi"?"🎨 थीम: "+themeName(currentTheme)+" ▾":"🎨 Theme: "+themeName(currentTheme)+" ▾"}
+const themes=["classic","dark","rose","sage"];let currentTheme=localStorage.getItem("stylebazaar-theme")||"classic";function themeName(t){return ({classic:language==="hi"?"क्रीम":"Cream",dark:language==="hi"?"डार्क":"Dark",rose:language==="hi"?"रोज़":"Rose",sage:language==="hi"?"सेज ग्रीन":"Sage Green"})[t]||t}function applyTheme(t){currentTheme=t;document.body.dataset.theme=t;localStorage.setItem("stylebazaar-theme",t);render()}document.getElementById("themeBtn").addEventListener("click",()=>{const next=themes[(themes.indexOf(currentTheme)+1)%themes.length];applyTheme(next)});document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{categoryFilter=b.dataset.cat;render()}));document.getElementById("lang").addEventListener("click",()=>{language=language==="hi"?"en":"hi";render()});document.getElementById("year").textContent=new Date().getFullYear();document.body.dataset.theme=currentTheme;render();
+</script></body></html>
